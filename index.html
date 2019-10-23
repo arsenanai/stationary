@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Канцелярские товары с доставкой Нурсултан</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.css">
+  </head>
+  <body class="bg-light">
+    <div id="app">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Карандаш</a>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  
+                </a>
+              </li>
+            </ul>
+        </div>
+      </nav>
+      <!--<div class="jumbotron jumbotron-fluid mb-0 text-center bg-light">
+        <div class="container">
+          <h5>Закажите товары здесь и мы его доставим</h5>
+          <p class="lead">Добро пожаловать в онлайн магазин канцелярских товаров Карандаш!</p>
+        </div>
+      </div>-->
+      <nav class="navbar navbar-expand-lg navbar-ligth sticky-top bg-light mb-2">
+        <div class="container">
+          <div class="input-group mr-1 sticky-top">
+            <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="button" id="button-addon2">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="button" id="button-addon3">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="button" id="button-addon4">
+                <i class="fa fa-sliders" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="input-group-append">
+              <a class="btn btn-outline-primary" id="button-addon5" href="#app">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="card mb-3" v-for="item in items">
+          <div class="row">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-3">
+                  <div :style="'background-image:url(\''+item.types[item.selectedType].image+'\');'" class="card-image with-background-image ml-auto mr-auto">
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-9">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-8 mb-2">
+                      <h5 class="card-title mb-1 mt-0">
+                        {{item.title}} 
+                        <span class="badge badge-info badge-pill" v-if="item.tags.includes('new')">
+                          новинка
+                        </span>
+                        <span class="badge badge-warning badge-pill" v-if="item.tags.includes('bestseller')">
+                          лидер продаж
+                        </span>
+                      </h5>
+                      <p class="card-description mb-1 mt-0">
+                        <small class="text-muted">
+                          {{item.description}} <br>
+                          {{item.types[item.selectedType].description}}
+                        </small>
+                      </p>
+                      <span > 
+                        <button type="button" class="btn btn-light with-background-image card-choose-image"
+                          v-for="(type,index) in item.types" 
+                          @click="item.selectedType=index"
+                          :style="'background-image:url(\''+type.image+'\');'">
+                          
+                        </button>
+                      </span>
+                      <h3 class="card-title mb-1 mt-0">
+                        <span class="badge badge-secondary badge-pill" v-if="item.types[item.selectedType].oldPrice">
+                          <del>{{item.types[item.selectedType].oldPrice}} {{currency}}</del>
+                        </span>
+                        <span class="badge badge-primary badge-pill">{{item.types[item.selectedType].price}} {{currency}}</span>
+                      </h3>
+                    </div> 
+                    <div class="col-md-12 col-lg-4">
+                      <button class="btn btn-primary mb-1 ml-auto">
+                        В корзину
+                      </button>
+                      <button class="btn btn-light mb-1">
+                        Купить
+                      </button>
+                      <button class="btn btn-light mb-1">
+                        Подробнее
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Cera';
+  src: url('../fonts/cera round.ttf');
+}
+@font-face {
+  font-family: 'Cera Bold';
+  src: url('../fonts/cera bold.ttf');
+}
+html,body{
+	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.card-image{
+	width:200px;
+	height:200px;
+}
+.card-choose-image{
+	width:50px;
+	height:50px;
+	margin:2px;
+}
+.card-choose{
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 97px;
+    max-width:87vw;
+}
+.with-background-image{
+    -webkit-background-size:contain;
+    -moz-background-size:contain;
+    -o-background-size:contain;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:center center;
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.card-choose{
+		max-width:66vw;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
