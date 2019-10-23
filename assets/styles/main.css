@@ -1,3 +1,5 @@
+[v-cloak] > * { display:none; }
+[v-cloak]::before { content: "loading..."; }
 @font-face {
   font-family: 'Cera';
   src: url('../fonts/cera round.ttf');
@@ -7,7 +9,7 @@
   src: url('../fonts/cera bold.ttf');
 }
 html,body{
-	
+  scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
