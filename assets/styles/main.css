@@ -36,6 +36,9 @@ html,body{
     background-repeat: no-repeat;
     background-position:center center;
 }
+.navbar-toggler{
+  border-color: transparent!important;
+}
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
 	
@@ -57,3 +60,21 @@ html,body{
 @media (min-width: 1200px) {
 
 }
+
+@media (max-width: 575.98px) {
+  
+}
+
+@media (max-width: 767.98px) {
+  
+}
+
+@media (max-width: 991.98px) {
+
+}
+
+@media (max-width: 1199.98px) {
+
+}
+
+
